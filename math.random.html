@@ -12,6 +12,15 @@
 			document.write('<div class="div-rnd"></div>');
 		}
 		
+		var divs= document.getElementsByClassName('div-rnd');
+		for(var i=0 ; i<100 ; i++){
+			
+			divs.item(i).style.top=Math.round(Math.random()*95)+'%';
+			divs.item(i).style.left=Math.round(Math.random()*95)+'%';	
+		
+		}
+		
+		
 	</script>
 </body>
 </html>
