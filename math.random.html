@@ -12,7 +12,7 @@
 			position:absolute;
 			width:30px;
 			height:10px;
-			border:1px solid red;	
+			border-radius:5px;
 		}
 	</style>
 </head>
@@ -20,7 +20,7 @@
 <body>
 	<script type="text/javascript">
 		
-		for(var i=0 ; i<50 ; i++){
+		for(var i=0 ; i<10 ; i++){
 			document.write('<div class="div-rnd"></div>');
 		}
 		
@@ -40,17 +40,36 @@
 		var divs= document.getElementsByClassName('div-rnd');
 		for(var i=0 ; i<divs.length ; i++){
 			
-			divs.item(i).style.top=num_rnd(5,95)+'%';
-			divs.item(i).style.left=num_rnd(5,95)+'%';	
+			divs.item(i).style.width = num_rnd(10,50)+'px';
+			divs.item(i).style.height = num_rnd(5,30)+'px';
+			divs.item(i).style.top = num_rnd(5,95)+'%';
+			divs.item(i).style.left = num_rnd(5,95)+'%';	
+			divs.item(i).style.backgroundColor = color_rnd();
 			
-			/*alert(Hr);*/
-			divs.item(i).style.width=num_rnd(10,50)+'px';
-			divs.item(i).style.height=num_rnd(5,30)+'px';
-			divs.item(i).style.backgroundColor=color_rnd();
+		
+			
 		
 		}
 		
-	
+		
+		function auto_motion(){
+			
+			for(var i=0 ; i<divs.length ; i++){
+				//alert('first line');
+				divs.item(i).style.width = num_rnd(10,50)+'px';
+				//alert('2 line');
+				divs.item(i).style.height = num_rnd(5,30)+'px';
+				//alert('3 line');
+				divs.item(i).style.top = num_rnd(5,95)+'%';
+				//alert('4 line');
+				divs.item(i).style.left = num_rnd(5,95)+'%';
+				//alert('5 line');	
+				divs.item(i).style.backgroundColor = color_rnd();
+				//alert('end');
+			}
+		}
+		//auto_motion();
+		setInterval(auto_motion(),1000);
 		
 		
 	</script>
