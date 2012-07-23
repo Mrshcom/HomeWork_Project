@@ -3,6 +3,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Untitled Document</title>
+	<style type="text/css"> 
+		div.div-rnd{
+			position:absolute;
+			width:30px;
+			height:10px;
+			border:1px solid red;	
+		}
+	</style>
 </head>
 
 <body>
@@ -26,6 +34,8 @@
 			Hr = num_rnd(0,255);
 			Hg = num_rnd(0,255);
 			Hb = num_rnd(0,255);				
+			
+			alert(Hr);
 			
 			divs.item(i).style.backgroundColor='#'+Hr+Hg+Hb;
 		
