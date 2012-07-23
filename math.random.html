@@ -28,6 +28,16 @@
 			var color = Math.round(Math.random()*(b-a+1)+a);
 			return color;
 		}
+			
+		function color_rnd(){
+			var c='#';
+			for(var i=0 ; i<6 ; i++){
+				c+=num_rnd(0,16).toString(16);	
+			}	
+			return c;
+		}	
+			var C=color_rnd();
+			alert(C);
 				
 		var divs= document.getElementsByClassName('div-rnd');
 		for(var i=0 ; i<100 ; i++){
