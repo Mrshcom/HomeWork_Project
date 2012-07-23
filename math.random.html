@@ -5,11 +5,17 @@
 <title>Untitled Document</title>
 	<style type="text/css"> 
 		body{
-			background-color:#ddd;		
+			background-color:#ddd;
+			transition:all 1s;
+			-webkit-transition:all 1s;
+			-moz-transition:all 1s;
+			-o-transition:all 1s;	
 		}
 	
 		div.div-rnd{
 			position:absolute;
+			top:0;
+			left:0;
 			width:30px;
 			height:10px;
 			border-radius:5px;
@@ -36,7 +42,7 @@
 		function color_rnd(){
 			var c='#';
 			for(var i=0 ; i<6 ; i++){
-				c+=num_rnd(0,15).toString(16);	
+				c += num_rnd(0,15).toString(16);	
 			}	
 			return c;
 		}	
@@ -44,14 +50,11 @@
 		var divs= document.getElementsByClassName('div-rnd');
 		for(var i=0 ; i<divs.length ; i++){
 			
-			divs.item(i).style.width = num_rnd(6,30)+'px';
-			divs.item(i).style.height = num_rnd(2,20)+'px';
-			divs.item(i).style.top = num_rnd(5,95)+'%';
-			divs.item(i).style.left = num_rnd(5,95)+'%';	
+			divs.item(i).style.width = num_rnd(6,30) + 'px';
+			divs.item(i).style.height = num_rnd(2,20) + 'px';
+			divs.item(i).style.top = num_rnd(5,95) + '%';
+			divs.item(i).style.left = num_rnd(5,95) + '%';	
 			divs.item(i).style.backgroundColor = color_rnd();
-			
-		
-			
 		
 		}
 		
@@ -59,20 +62,15 @@
 		function auto_motion(){
 			
 			for(var i=0 ; i<divs.length ; i++){
-				//alert('first line');
-				divs.item(i).style.width = num_rnd(6,30)+'px';
-				//alert('2 line');
-				divs.item(i).style.height = num_rnd(2,20)+'px';
-				//alert('3 line');
-				divs.item(i).style.top = num_rnd(5,95)+'%';
-				//alert('4 line');
-				divs.item(i).style.left = num_rnd(5,95)+'%';
-				//alert('5 line');	
+				divs.item(i).style.width = num_rnd(6,30) + 'px';
+				divs.item(i).style.height = num_rnd(2,20) + 'px';
+				divs.item(i).style.top = num_rnd(5,95) + '%';
+				divs.item(i).style.left = num_rnd(5,95) + '%';
 				divs.item(i).style.backgroundColor = color_rnd();
-				//alert('end');
+				document.body.style.backgroundColor = color_rnd();
 			}
 		}
-		setInterval(auto_motion,500);
+		setInterval(auto_motion,800);
 		
 		
 	</script>
