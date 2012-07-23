@@ -25,7 +25,7 @@
 		}
 		
 		function num_rnd(a,b){
-			var color = Math.round(Math.random()*(b-a+1)+a);
+			var color = Math.floor(Math.random()*(b-a+1)+a);
 			return color;
 		}
 			
@@ -37,21 +37,18 @@
 			return c;
 		}	
 			var C=color_rnd();
-			alert(C);
+			//alert(C);
 				
 		var divs= document.getElementsByClassName('div-rnd');
 		for(var i=0 ; i<100 ; i++){
 			
 			divs.item(i).style.top=num_rnd(5,95)+'%';
 			divs.item(i).style.left=num_rnd(5,95)+'%';	
-		
-			Hr = num_rnd(0,255);
-			Hg = num_rnd(0,255);
-			Hb = num_rnd(0,255);				
 			
 			/*alert(Hr);*/
-			
-			divs.item(i).style.backgroundColor='#'+Hr+Hg+Hb;
+			divs.item(i).style.width=num_rnd(10,50)+'px';
+			divs.item(i).style.height=num_rnd(5,30)+'px';
+			divs.item(i).style.backgroundColor=color_rnd();
 		
 		}
 		
