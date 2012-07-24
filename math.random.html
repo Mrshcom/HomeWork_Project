@@ -35,8 +35,8 @@
 		}
 		
 		function num_rnd(a,b){
-			var color = Math.floor(Math.random()*(b-a+1)+a);
-			return color;
+			var num = Math.floor(Math.random()*(b-a+1)+a);
+			return num;
 		}
 			
 		function color_rnd(){
@@ -59,6 +59,7 @@
 				document.body.style.backgroundColor = color_rnd();
 			}
 		}
+		auto_motion();
 		setInterval(auto_motion,800);
 		
 		
