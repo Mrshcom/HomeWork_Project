@@ -8,11 +8,17 @@
 *{
 	padding:0;
 	margin:0;
-	-webkit-transition:all 8s;
 }
 
 body{
 	background-color:black;
+}
+
+body.preload div.box{
+	-webkit-border-radius:1px;
+	-webkit-transform: rotate(3600deg) translate(-500px,-500px);
+	background-color:darkmagenta;
+
 }
 
 div.box{
@@ -21,13 +27,7 @@ div.box{
 	height:400px;
 	margin:50px auto 0;
 	border-radius:800px;
-}
-
-body.preload div.box{
-	-webkit-border-radius:1px;
-	-webkit-transform: rotate(3600deg) translate(-500px,-500px);
-	background-color:darkmagenta;
-
+	-webkit-transition:all 8s;
 }
 
 </style>
@@ -41,8 +41,6 @@ window.onload=function(){
 </head>
 
 <body class="preload">
-
-<div class="box"></div>
-
+	<div class="box"></div>
 </body>
 </html>
