@@ -1,0 +1,134 @@
+
+*{
+	padding:0;
+	margin:0;
+	border:none !important;
+	/*
+*/
+}
+
+body{
+	background-color:#eee;
+}
+	
+
+div.container{
+	width:980px;
+	min-height:600px;
+	margin:0 auto;
+	padding-top:1px;
+	border:1px solid red;
+}
+
+div.parent_slideshow{
+	width:700px;
+	height:470px; 
+	margin:50px auto 0;
+	padding:20px 0 0 3px;
+	border:1px solid green;
+	background-image:url(SlideShow_imgs/slider_bg.png);
+	background-repeat:no-repeat;
+}
+
+div.parent_slideshow div.slideshow{
+	width:645px; /*677*/
+	height:450px; /* 365 height of pics + btns height */
+	margin:0 auto;
+	overflow:hidden;
+	position:relative;
+	border:1px solid blue;
+}
+
+div.slideshow div.case_train{
+	width:645px;
+	height:340px;
+	border:1px solid yellow;
+	background-image:url(SlideShow_imgs/slider_loading.gif);
+	background-repeat:no-repeat;
+	background-position : center center;
+	border-radius:10px;
+	overflow:hidden;
+	position:relative;
+}
+
+div.case_train div.train{
+	width:2800px;
+	height:340px;
+	border:1px solid green;
+	position:absolute;
+	top:0;
+	left:0;
+	-webkit-transition: left 800ms ease-in-out;
+	-moz-transition: left 800ms ease-in-out;
+	-0-transition: left 800ms ease-in-out;
+	-ms-transition: left 800ms ease-in-out;
+}
+
+div.slideshow div.train > div{
+	width:645px;
+	height:inherit;
+	float:left;
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position:left top;
+}
+
+div.slideshow ul.btns{
+	list-style-type:none;
+	width:auto;
+	height:45px;
+	position:absolute;
+	bottom:0;
+	left:30%;
+	margin-left:15px;
+	border:1px solid green;
+}
+
+div.slideshow ul.btns > li{
+	width:30px;
+	height:20px;
+	float:left;
+	cursor : pointer;
+	margin-right:10px;
+	background-color:#eaf5f5; /*eaf5f5 */
+	border:5px solid #cad5d5 !important;
+	-webkit-transition:all 1000ms;
+	-moz-transition:all 1000ms;
+	-0-transition:all 1000ms;
+	-ms-transition:all 1000ms;
+	border-radius:250px;
+	box-shadow:3px 3px 5px #999;
+}
+
+div.slideshow ul.btns > li:hover ,
+div.slideshow ul.btns > li.active{
+	height:30px;     /* increase 10px of heigh */
+	margin-top:-5px; /* for increase height of both sides top and bottom */
+	background-color:#cad5d5;
+	border:5px solid #aab5b5 !important;
+	-webkit-transition:all 100ms;
+	-moz-transition:all 100ms;
+	-o-transition:all 100ms;
+	-ms-transition:all 100ms;
+}
+
+div.container p.footer{
+	width:100%;
+	left:0;
+	position:absolute;
+	bottom:15px;
+	color:#666;
+	text-align:center;
+	line-height:14px;
+	font-family:sans-serif;
+	font-size:8pt;
+}
+
+div.container p.footer > a{
+	text-decoration:none;
+	color:#1D26FF;
+}
+
+div.container p.footer > a:hover{
+	text-decoration:underline;
+}
