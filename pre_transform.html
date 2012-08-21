@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+	<style type="text/css">
+		.square{
+			width:220px;
+			height:220px;
+			background-color:blue;	
+			position:absolute;
+			top:50%;
+			left:35%;
+			border-radius:5px;
+			transform:rotate(3600deg) translate(-500,-500);
+			-webkit-transform:rotate(3600deg) translate(-500,-500);
+			transition:all 1s;
+			-webkit-transition:all 3s;
+			-moz-transition:all 1s;
+			-o-transition:all 1s;
+		}
+	</style>
+</head>
+
+<body>
+	<script type="text/javascript">
+		document.write('<div class="square" > Hi </div>');
+		var i = 10;
+		
+		
+			//document.getElementsByClassName('square').item(0).style.webkitTransform = 'translate(-100'+'px'+',200'+'px'+')';
+		
+		function rotate(){
+			//alert('hi');
+			i += 500;
+			
+			document.getElementsByClassName('square').item(0).style.webkitTransform -= 'rotate(100deg)';
+			//document.getElementsByClassName('square').item(0).style.borderRadius += i + 'px';
+			
+			
+			
+			//alert('0');
+			document.getElementsByClassName('square').item(0).style.webkitTransform -= 'translate(20'+'px'+',50'+'px'+')';
+			
+		}
+		//rotate();
+	//setInterval(rotate,300);
+		
+	</script>
+</body>
+</html>
