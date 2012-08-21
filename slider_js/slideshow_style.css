@@ -46,7 +46,7 @@ div.slideshow div.case_train{
 	background-image:url(images/slider_loading.gif);
 	background-repeat:no-repeat;
 	background-position : center center;
-	border-radius:40px;
+	border-radius:10px;
 	overflow:hidden;
 	position:relative;
 }
@@ -76,7 +76,7 @@ div.slideshow div.train > div{
 div.slideshow ul.btns{
 	list-style-type:none;
 	width:auto;
-	height:40px;
+	height:45px;
 	position:absolute;
 	bottom:0;
 	left:30%;
@@ -97,6 +97,7 @@ div.slideshow ul.btns > li{
 	-0-transition:all 1000ms;
 	-ms-transition:all 1000ms;
 	border-radius:250px;
+	box-shadow:3px 3px 5px #999;
 }
 
 div.slideshow ul.btns > li:hover ,
