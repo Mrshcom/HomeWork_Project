@@ -1,0 +1,72 @@
+*{
+	border: none !important;
+}
+
+body{
+	background-color:#ccc;
+}
+
+div.container{
+	width: 980px;
+	min-height: 500px;
+	margin:0 auto;
+	padding:20px;
+	direction: rtl;
+	border: 1px solid red;
+}
+
+div.container div.newsMainCase{
+	width: 600px;
+	height: 241px;
+	margin: 100px auto 0;
+	overflow: hidden;
+	position: relative;
+	border-radius: 5px;
+	border: 2px solid blue !important;
+}
+
+div.container div.newsMainCase div.newsTrain{
+	width: 600px;
+	height: 500px;
+	position: absolute;;
+	top: 0;
+	left: 0;
+	border: 1px solid orange;
+}
+
+div.container div.newsMainCase div.newsTrain ul{
+	list-style-image: url(images/Pencil.png);
+	font-family: Tahoma;
+	font-size: 11px;
+	border: 3px solid blue;
+	margin-top: 0;
+}
+
+div.container div.newsMainCase div.newsTrain ul > li{
+	/*min-height: 15px;*/
+	/*line-height: 15px;*/
+	border: 1px solid red;
+	/*background-color: blue;*/
+	padding: 10px 0 10px 0;
+}
+
+div.container div.newsMainCase div.newsTrain ul > li:nth-child(even){
+	/*background-color: red;*/
+}
+
+div.newsMainCase div.newsTrain ul > li > a{
+	text-decoration: none;
+	color: #386AAA;
+	margin: 0 0 0 10px;
+	cursor: help;
+}
+
+div.newsMainCase div.newsTrain ul > li > a:hover{
+	text-decoration: underline;
+	color: #3B4E64;
+}
+
+div.newsMainCase div.newsTrain ul > li > span{
+	color: gray;
+	font-style: italic;
+}
